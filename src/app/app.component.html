@@ -1,17 +1,16 @@
 <div class="contenedor-padre">
-  <mat-toolbar class="barra" color="primary">
+  <mat-toolbar class="barra" color="warn">
     <mat-toolbar-row>
       <button (click)="cajon.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
       <span>
-        Compumundo Hiper Mega Red
+        Mi tienda&nbsp;|&nbsp;By parzibyte
       </span>
       <span class="example-fill-remaining-space"></span>
-      <button mat-raised-button [matMenuTriggerFor]="menu" color="#e1f5fe">
-        <mat-icon> shopping_cart</mat-icon>
-        <span style="margin-right: 10px;" [matBadge]="productos.length+''" matBadgeOverlap="false"
-              matBadgePosition="after" matBadgeColor="warn" >Mis compras</span>
+      <button mat-raised-button [matMenuTriggerFor]="menu">
+        <span style="margin-right: 10px" [matBadge]="productos.length+''" matBadgeOverlap="false"
+              matBadgePosition="below after">Carrito de compras</span>
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngFor="let p of productos;">{{p.nombre}}  {{p.precio | currency}}</button>
@@ -23,30 +22,33 @@
           Terminar compra</a>
       </mat-menu>
       <a style="margin-left: 10px" mat-raised-button color="primary"
-         href="https://www.unlam.edu.ar/" target="_blank">
-         <mat-icon>help_outline</mat-icon>
+         href="https://parzibyte.me/blog/contrataciones-ayuda/" target="_blank">
+        Ayuda y soporte
       </a>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-sidenav-container class="contenido">
     <mat-sidenav style="min-width: 300px;" #cajon opened mode="side">
       <mat-nav-list>
-        <p style="margin-left: 14px;padding-top: 14px ;font-weight: bold;font-size: 17px;">Administrador</p>
+        <p style="margin-left: 4px;">Administrador</p>
         <a mat-list-item routerLink="/productos">
           <mat-icon color="primary">list_alt</mat-icon>
-          &nbsp;Productos
+          Productos
         </a>
         <a mat-list-item routerLink="/ventas">
           <mat-icon color="primary">local_shipping</mat-icon>
-          &nbsp; Ventas
+          Ventas
         </a>
         <mat-divider></mat-divider>
-        <p style="margin-left: 14px;padding-top: 14px ;font-weight: bold;font-size: 17px;">Cliente</p>
+        <p style="margin-left: 4px;">Cliente</p>
         <a mat-list-item routerLink="/tienda">
           <mat-icon color="primary">store</mat-icon>
-          &nbsp;Ver tienda
+          Ver tienda
         </a>
-        <mat-divider></mat-divider>        
+        <mat-divider></mat-divider>
+        <a mat-list-item href="https://parzibyte.me/blog/" target="_blank">
+          Creado por Parzibyte
+        </a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="padding-10">

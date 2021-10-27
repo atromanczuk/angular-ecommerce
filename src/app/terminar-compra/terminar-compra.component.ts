@@ -1,4 +1,4 @@
-
+/**/
 import {Component, OnInit} from '@angular/core';
 import {CarritoService} from "../carrito.service";
 import {DataSharingService} from "../data-sharing.service";

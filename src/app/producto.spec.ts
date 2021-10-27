@@ -1,4 +1,4 @@
-
+/**/
 import { Producto } from './producto';
 
 describe('Producto', () => {

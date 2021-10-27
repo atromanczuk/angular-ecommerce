@@ -1,4 +1,4 @@
-
+/**/
 const conexion = require("./conexion")
 module.exports = {
   insertar(idVenta, idProducto) {

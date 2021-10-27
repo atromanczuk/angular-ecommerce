@@ -1,4 +1,4 @@
-
+/**/
 import { Cliente } from './cliente';
 
 describe('Cliente', () => {

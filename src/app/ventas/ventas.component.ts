@@ -1,4 +1,4 @@
-
+/**/
 import {Component, OnInit} from '@angular/core';
 import {VentasService} from "../ventas.service";
 import {Router} from "@angular/router";
